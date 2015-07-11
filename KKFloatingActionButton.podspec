@@ -130,6 +130,6 @@ s.resources = "KKFloatingActionButton/**/*.{png,jpeg,jpg,storyboard,xib}"
    s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency "MaterialKit"
+   s.dependency 'MaterialKit'
 
 end
