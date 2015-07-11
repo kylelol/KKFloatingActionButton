@@ -103,7 +103,7 @@ s.source       = { :git => "https://github.com/kylelol/KKFloatingActionButton.gi
   #
 
   # s.resource  = "icon.png"
-s.resources = "KKFloatingActionButton/**/*.{png,jpeg,jpg,storyboard,xib}"
+  #s.resources = "KKFloatingActionButton/**/*.{png,jpeg,jpg,storyboard,xib}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
