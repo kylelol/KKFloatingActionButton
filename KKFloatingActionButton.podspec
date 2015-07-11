@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "A short description of KKFloatingActionButton."
 
-#s.description  = <<-DESC
+ s.description  = <<-DESC
                    A longer description of KKFloatingActionButton in Markdown format.
 
                    * Think: Why did you write this? What is the focus? What does it do?
@@ -114,8 +114,8 @@ s.source       = { :git => "https://github.com/kylelol/KKFloatingActionButton.gi
   #  the lib prefix of their name.
   #
 
-  s.framework  = "UIKit"
-  #s.frameworks = "UIKit", "QuartzCore"
+#s.framework  = "UIKit"
+  s.frameworks = "UIKit", "QuartzCore"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
