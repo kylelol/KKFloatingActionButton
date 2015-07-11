@@ -1,0 +1,6 @@
+framework module MaterialKit {
+  umbrella header "Pods-KKFloatingActionButton-MaterialKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
