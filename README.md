@@ -1,9 +1,13 @@
-# MyLibrary
+# KKFloatingActionButton
 
-#[![CI Status](http://img.shields.io/travis/kylelol/KKFloatingActionButton.svg?style=flat)](https://travis-ci.org/kylelol/KKFloatingActionButton)
+
 [![Version](https://img.shields.io/cocoapods/v/KKFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/KKFloatingActionButton)
 [![License](https://img.shields.io/cocoapods/l/KKFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/KKFloatingActionButton)
 [![Platform](https://img.shields.io/cocoapods/p/KKFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/KKFloatingActionButton)
+
+<p align="center">
+<img style="-webkit-user-select: none;" src="http://imgur.com/Bsms9e1" width="365" height="568">
+</p>
 
 KKFloatingActionButton is very customizable Google Material Design-like menu. The menu is driven by a table view, and the control allows you to pass your own custom cells. 
 
