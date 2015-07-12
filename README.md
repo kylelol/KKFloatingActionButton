@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/KKFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/KKFloatingActionButton)
 
 <p align="center">
-<img style="-webkit-user-select: none;" src="http://imgur.com/Bsms9e1" width="365" height="568">
+<img style="-webkit-user-select: none;" src="http://i.imgur.com/Bsms9e1.gifv" width="365" height="568">
 </p>
 
 KKFloatingActionButton is very customizable Google Material Design-like menu. The menu is driven by a table view, and the control allows you to pass your own custom cells. 
