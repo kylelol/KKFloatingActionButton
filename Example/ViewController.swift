@@ -17,9 +17,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //self.floatingButton.menuBgColor = UIColor.blackColor()
+        //Must get called before anything.
         self.floatingButton.configureViews()
 
+        // Customization points. 
         self.floatingButton.dataSource = self
         self.floatingButton.delegate = self
         self.floatingButton.customTableViewCell = (UINib(nibName: "KKMenuTableViewCell", bundle: nil), "MenuTableCell")

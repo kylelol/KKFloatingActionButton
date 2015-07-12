@@ -116,7 +116,6 @@ public class KKFloatingMaterialButton: UIView {
         self.configureMKButton()
         self.configureRotatingImageView()
         
-      //  self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapFloatingButton:"))
         button!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapFloatingButton"))
         
     }
