@@ -25,6 +25,17 @@ public class KKFloatingMaterialButton: UIView {
     
     
     //Exposed Properties
+    
+    public var imageRotationAngle: CGFloat = CGFloat(-M_PI + -M_PI_4) //Default
+    
+    public var rotatingImage: UIImage? {
+        didSet {
+            self.imageView?.image = rotatingImage
+        }
+    }
+    
+    public var menuBgOpacity: CGFloat = 0.7 //Default
+    
     public var menuBgColor: UIColor? = UIColor.greenColor() {
         didSet {
             self.bgView?.backgroundColor = menuBgColor
@@ -98,11 +109,12 @@ public class KKFloatingMaterialButton: UIView {
     }
     
     public func configureViews() {
-        
+        self.backgroundColor = UIColor.clearColor()
         windowView = UIView(frame: UIScreen.mainScreen().bounds)
         self.configureBgView()
         self.configureMenuTableView()
         self.configureMKButton()
+        self.configureRotatingImageView()
         
       //  self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapFloatingButton:"))
         button!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapFloatingButton"))
@@ -126,6 +138,7 @@ public class KKFloatingMaterialButton: UIView {
         windowView!.addSubview(bgView!)
         windowView!.addSubview(menuTableView!)
         mainWindow?.insertSubview(windowView!, belowSubview: self)
+        mainWindow?.addSubview(self)
         self.menuTableView?.reloadData()
         
     }
@@ -133,8 +146,8 @@ public class KKFloatingMaterialButton: UIView {
     private func presentMenu() {
 
         UIView.animateWithDuration(0.25, animations: { () -> Void in
-            self.bgView?.alpha = 0.7
-            self.imageView?.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI + -M_PI_4))
+            self.bgView?.alpha = self.menuBgOpacity
+            self.imageView?.transform = CGAffineTransformMakeRotation(self.imageRotationAngle)
         })
     }
     
@@ -142,6 +155,7 @@ public class KKFloatingMaterialButton: UIView {
         UIView.animateWithDuration(0.25, animations: { () -> Void in
             self.menuTableView?.alpha = 0.0
             self.bgView?.alpha = 0.0
+            self.imageView!.transform = CGAffineTransformIdentity
             
             }) { _ in
                 self.bgView?.removeFromSuperview()
@@ -164,9 +178,18 @@ public class KKFloatingMaterialButton: UIView {
         self.addSubview(button!)
     }
     
+    private func configureRotatingImageView() {
+        
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: CGRectGetWidth(self.bounds)/2, height: CGRectGetHeight(self.bounds)/2))
+            imageView!.center = button!.center
+            imageView!.clipsToBounds = true
+            imageView!.contentMode = .ScaleAspectFit
+            self.addSubview(imageView!)
+    }
+    
     private func configureMenuTableView() {
         menuTableView = UITableView(frame: CGRect(x: screenWidth/4, y: 0, width: 0.75 * screenWidth, height: screenHeight - (screenHeight - CGRectGetMaxY(self.frame))))
-        menuTableView!.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth/2, height: self.bounds.height/2))
+        menuTableView!.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth/2, height: self.bounds.height/3))
         menuTableView!.scrollEnabled = false
         menuTableView!.dataSource = self
         menuTableView!.delegate = self
@@ -182,6 +205,8 @@ public class KKFloatingMaterialButton: UIView {
         bgView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapBgView:"))
         
     }
+    
+
     
     //MARK: - Target Action 
     func didTapBgView(tap: UITapGestureRecognizer) {
