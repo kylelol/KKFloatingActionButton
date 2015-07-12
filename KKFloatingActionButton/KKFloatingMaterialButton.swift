@@ -25,19 +25,19 @@ public class KKFloatingMaterialButton: UIView {
     
     
     //Exposed Properties
-    var menuBgColor: UIColor? = UIColor.greenColor() {
+    public var menuBgColor: UIColor? = UIColor.greenColor() {
         didSet {
             self.bgView?.backgroundColor = menuBgColor
         }
     }
     
-    var buttonBgColor: UIColor? {
+    public var buttonBgColor: UIColor? {
         didSet {
             self.button?.backgroundColor = buttonBgColor
         }
     }
     
-    var buttonShadowRadius: CGFloat? {
+    public var buttonShadowRadius: CGFloat? {
         didSet {
             
             if buttonShadowRadius != nil {
@@ -46,7 +46,7 @@ public class KKFloatingMaterialButton: UIView {
         }
     }
     
-    var buttonShadowOpacity: Float? {
+    public var buttonShadowOpacity: Float? {
         didSet {
             
             //Ensure value is not nil, and between [0, 1]
@@ -56,7 +56,7 @@ public class KKFloatingMaterialButton: UIView {
         }
     }
     
-    var buttonShadowColor: UIColor? {
+    public var buttonShadowColor: UIColor? {
         didSet {
             if buttonShadowColor != nil {
                 self.button?.layer.shadowColor = buttonShadowColor!.CGColor
@@ -64,7 +64,7 @@ public class KKFloatingMaterialButton: UIView {
         }
     }
     
-    var customTableViewCell: (nib: UINib?, reuseIdentifer: String?)? {
+    public var customTableViewCell: (nib: UINib?, reuseIdentifer: String?)? {
         didSet {
             
             if let tuple = customTableViewCell, nib = tuple.nib, reuseIdentifier = tuple.reuseIdentifer {
@@ -73,8 +73,8 @@ public class KKFloatingMaterialButton: UIView {
         }
     }
     
-    weak var delegate: KKFloatingMaterialButtonDelegate?
-    weak var dataSource: KKFloatingMaterialButtonDataSource! //must be set
+    public weak var delegate: KKFloatingMaterialButtonDelegate?
+    public weak var dataSource: KKFloatingMaterialButtonDataSource! //must be set
     
     //Constants
     private let screenWidth = CGRectGetWidth(UIScreen.mainScreen().bounds)
@@ -97,7 +97,7 @@ public class KKFloatingMaterialButton: UIView {
         return UIApplication.sharedApplication().keyWindow
     }
     
-    func configureViews() {
+    public func configureViews() {
         
         windowView = UIView(frame: UIScreen.mainScreen().bounds)
         self.configureBgView()
@@ -109,7 +109,7 @@ public class KKFloatingMaterialButton: UIView {
         
     }
     
-    func showMenu() {
+    public func showMenu() {
         if isMenuVisible {
             self.dismissMenu()
         } else {
