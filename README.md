@@ -1,9 +1,9 @@
 # MyLibrary
 
-[![CI Status](http://img.shields.io/travis/kylelol/MyLibrary.svg?style=flat)](https://travis-ci.org/kylelol/MyLibrary)
-[![Version](https://img.shields.io/cocoapods/v/MyLibrary.svg?style=flat)](http://cocoapods.org/pods/MyLibrary)
-[![License](https://img.shields.io/cocoapods/l/MyLibrary.svg?style=flat)](http://cocoapods.org/pods/MyLibrary)
-[![Platform](https://img.shields.io/cocoapods/p/MyLibrary.svg?style=flat)](http://cocoapods.org/pods/MyLibrary)
+[![CI Status](http://img.shields.io/travis/kylelol/KKFloatingActionButton.svg?style=flat)](https://travis-ci.org/kylelol/KKFloatingActionButton)
+[![Version](https://img.shields.io/cocoapods/v/KKFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/MyLibrary)
+[![License](https://img.shields.io/cocoapods/l/KKFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/KKFloatingActionButton)
+[![Platform](https://img.shields.io/cocoapods/p/KKFloatingActionButton.svg?style=flat)](http://cocoapods.org/pods/KKFloatingActionButton)
 
 KKFloatingActionButton is very customizable Google Material Design-like menu. The menu is driven by a table view, and the control allows you to pass your own custom cells. 
 
@@ -31,12 +31,20 @@ Refer to the example project for more guidance.
 import KKFloatingActionButton
 ````
 
-2. Create a UIView in IB and assign the custom class to: (prefer a perfect square) 
+2. Create a UIView(prefrably a perfect square) in IB and assign the custom class to `KKFloatingMaterialButton`, then connect it to an outlet in your view controller: 
 ````swift
-KKFloatingMaterialButton
+@IBOutlet weak var menuButton: KKFloatingMaterialButton!
 ````
 
-3.  
+3.  Conform to the `KKFloatingMaterialButtonDataSource` and `KKFloatingMaterialButtonDelegate`
+4. Inside your view controllers `viewDidLoad()` call the `configureViews()` method on the `KKFloatingMaterialButton`, then continue to customize the button. 
+````Swift
+// Inside viewDidLoad()
+menuButton.configureViews()
+menuButton.dataSource = self
+menuButton.delegate = self
+// Continue customizing....
+````
 
 ## Author
 
@@ -44,4 +52,4 @@ kylelol, kyle.kirkland0528@me.com
 
 ## License
 
-MyLibrary is available under the MIT license. See the LICENSE file for more info.
+KKFloatingMaterialButtonDataSource is available under the MIT license. See the LICENSE file for more info.
