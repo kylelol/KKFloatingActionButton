@@ -9,19 +9,19 @@
 import UIKit
 import MaterialKit
 
-protocol KKFloatingMaterialButtonDataSource: class {
+public protocol KKFloatingMaterialButtonDataSource: class {
     
     func numberOfRowsInMenuTableView() -> Int
     func menuTableView(tableView: UITableView, cellForAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
 }
 
-protocol KKFloatingMaterialButtonDelegate: class {
+public protocol KKFloatingMaterialButtonDelegate: class {
     func menuTableView(tableView: UITableView, heightForCellAtIndexPath indexPath: NSIndexPath) -> CGFloat
     
     func menuTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
 }
 
-class KKFloatingMaterialButton: UIView {
+public class KKFloatingMaterialButton: UIView {
     
     
     //Exposed Properties
@@ -195,21 +195,21 @@ class KKFloatingMaterialButton: UIView {
     
 }
 
-extension KKFloatingMaterialButton: UITableViewDelegate {
+ extension KKFloatingMaterialButton: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.delegate!.menuTableView(tableView, heightForCellAtIndexPath: indexPath)
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.delegate!.menuTableView(tableView, didSelectRowAtIndexPath: indexPath)
     }
     
 }
 
-extension KKFloatingMaterialButton: UITableViewDataSource {
+ extension KKFloatingMaterialButton: UITableViewDataSource {
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         var delay = Double((indexPath.row * indexPath.row)) * 0.004
         
         let translation = -(indexPath.row + 1) * 50
@@ -225,11 +225,11 @@ extension KKFloatingMaterialButton: UITableViewDataSource {
             cell.alpha = 1.0
         }, completion: nil)
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   public  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataSource.numberOfRowsInMenuTableView()
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         return self.dataSource.menuTableView(tableView, cellForAtIndexPath: indexPath)
     }
 }
