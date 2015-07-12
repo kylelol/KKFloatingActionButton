@@ -37,6 +37,7 @@ Refer to the example project for more guidance.
   ````
 
 3.  Conform to the `KKFloatingMaterialButtonDataSource` and `KKFloatingMaterialButtonDelegate`
+
 4. Inside your view controllers `viewDidLoad()` call the `configureViews()` method on the `KKFloatingMaterialButton`, then continue to customize the button. 
   ````Swift
   // Inside viewDidLoad()
