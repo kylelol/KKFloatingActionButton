@@ -27,24 +27,24 @@ pod "KKFloatingActionButton"
 Refer to the example project for more guidance. 
 
 1. Add the import statement to your view controller. 
-````swift
-import KKFloatingActionButton
-````
+  ````swift
+  import KKFloatingActionButton
+  ````
 
 2. Create a UIView(prefrably a perfect square) in IB and assign the custom class to `KKFloatingMaterialButton`, then connect it to an outlet in your view controller: 
-````swift
-@IBOutlet weak var menuButton: KKFloatingMaterialButton!
-````
+  ````swift
+  @IBOutlet weak var menuButton: KKFloatingMaterialButton!
+  ````
 
 3.  Conform to the `KKFloatingMaterialButtonDataSource` and `KKFloatingMaterialButtonDelegate`
 4. Inside your view controllers `viewDidLoad()` call the `configureViews()` method on the `KKFloatingMaterialButton`, then continue to customize the button. 
-````Swift
-// Inside viewDidLoad()
-menuButton.configureViews()
-menuButton.dataSource = self
-menuButton.delegate = self
-// Continue customizing....
-````
+  ````Swift
+  // Inside viewDidLoad()
+  menuButton.configureViews()
+  menuButton.dataSource = self
+  menuButton.delegate = self
+  // Continue customizing....
+  ````
 
 ## Author
 
