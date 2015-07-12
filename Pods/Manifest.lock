@@ -1,10 +1,18 @@
 PODS:
+  - KKFloatingActionButton (0.0.7):
+    - MaterialKit
   - MaterialKit (0.3.5)
 
 DEPENDENCIES:
+  - KKFloatingActionButton (from `~/Documents/Libraries/KKFloatingActionButton`)
   - MaterialKit
 
+EXTERNAL SOURCES:
+  KKFloatingActionButton:
+    :path: "~/Documents/Libraries/KKFloatingActionButton"
+
 SPEC CHECKSUMS:
+  KKFloatingActionButton: 8fdcda2fb76029d3828bced8b880ef756d9fffae
   MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
 
 COCOAPODS: 0.37.2

@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Example-KKFloatingActionButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Example-MaterialKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-KKFloatingActionButton-MaterialKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>73B76226FBAB46B6F4AAFEC1</key>
+		<key>177F64726E444676D2D7E40C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8685403A20724C5A8FE3E9A</key>
+		<key>260CB91C6A4D196C84257C2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>441F411F3FD194481E88222C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C18925A09C2180ED72FAB2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>60235F5E52BCD4E34B744B14</key>
 		<dict>
 			<key>primary</key>
 			<true/>

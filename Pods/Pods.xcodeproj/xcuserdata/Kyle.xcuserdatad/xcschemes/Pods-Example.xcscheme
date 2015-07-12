@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "260CB91C6A4D196C84257C2B"
-               BuildableName = "MaterialKit.framework"
-               BlueprintName = "Pods-KKFloatingActionButton-MaterialKit"
+               BlueprintIdentifier = "60235F5E52BCD4E34B744B14"
+               BuildableName = "Pods_Example.framework"
+               BlueprintName = "Pods-Example"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

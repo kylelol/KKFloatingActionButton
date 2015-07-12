@@ -1,0 +1,6 @@
+framework module MaterialKit {
+  umbrella header "Pods-Example-MaterialKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

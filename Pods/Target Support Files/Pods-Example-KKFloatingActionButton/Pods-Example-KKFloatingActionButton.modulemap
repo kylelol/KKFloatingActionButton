@@ -1,0 +1,6 @@
+framework module KKFloatingActionButton {
+  umbrella header "Pods-Example-KKFloatingActionButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
