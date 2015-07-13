@@ -26,24 +26,6 @@ public class KKFloatingMaterialButton: UIView {
     
     //Exposed Properties
     
-    public var rippleColor: UIColor? {
-        didSet {
-            self.button?.rippleLayerColor = rippleColor!
-        }
-    }
-    
-    public var ripplePercent: Float = 1.75 {
-        didSet {
-            self.button?.ripplePercent = ripplePercent
-        }
-    }
-    
-    public var rippleLocation: MKRippleLocation = .Center {
-        didSet {
-            self.button?.rippleLocation = rippleLocation
-        }
-    }
-    
     public var imageRotationAngle: CGFloat = CGFloat(-M_PI + -M_PI_4) //Default
     
     public var rotatingImage: UIImage? {
@@ -93,12 +75,6 @@ public class KKFloatingMaterialButton: UIView {
         }
     }
     
-    public var buttonShadowOffset: CGSize = CGSize(width: 0, height: 2) {
-        didSet {
-            self.button?.layer.shadowOffset = buttonShadowOffset
-        }
-    }
-    
     public var customTableViewCell: (nib: UINib?, reuseIdentifer: String?)? {
         didSet {
             
@@ -140,6 +116,7 @@ public class KKFloatingMaterialButton: UIView {
         self.configureMKButton()
         self.configureRotatingImageView()
         
+      //  self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapFloatingButton:"))
         button!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "didTapFloatingButton"))
         
     }
@@ -192,12 +169,12 @@ public class KKFloatingMaterialButton: UIView {
         button!.cornerRadius = CGRectGetHeight(button!.frame)/2
         button!.backgroundLayerCornerRadius = CGRectGetHeight(button!.frame)/2
         button!.maskEnabled = false
-        button!.ripplePercent = self.ripplePercent
-        button!.rippleLocation = self.rippleLocation
+        button!.ripplePercent = 1.75
+        button!.rippleLocation = .Center
         button!.layer.shadowOpacity = 0.3
         button!.layer.shadowRadius = 7
         button!.layer.shadowColor = UIColor.blackColor().CGColor
-        button!.layer.shadowOffset = self.buttonShadowOffset
+        button!.layer.shadowOffset = CGSize(width: 0, height: 2)
         self.addSubview(button!)
     }
     

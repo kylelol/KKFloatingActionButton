@@ -22,6 +22,7 @@
 		27DF28821B530AEF0018B03A /* KKFloatingActionButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 27DF287F1B530AEF0018B03A /* KKFloatingActionButton.h */; };
 		27DF28831B530AEF0018B03A /* KKFloatingMaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DF28801B530AEF0018B03A /* KKFloatingMaterialButton.swift */; };
 		27DF28851B531CFD0018B03A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 27DF28841B531CFD0018B03A /* README.md */; };
+		27F578201B54474F00DD20BF /* UITableViewCell+KKFABHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F5781F1B54474F00DD20BF /* UITableViewCell+KKFABHelper.swift */; };
 		BCF024FA7A946A8141B5326C /* Pods_KKFloatingActionButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0489B8D638D37E766ECA733 /* Pods_KKFloatingActionButton.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F082BF8B9AC3E77DFEEF909A /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB747B3CA3A106B6C0708562 /* Pods_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		27DF287F1B530AEF0018B03A /* KKFloatingActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKFloatingActionButton.h; sourceTree = "<group>"; };
 		27DF28801B530AEF0018B03A /* KKFloatingMaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKFloatingMaterialButton.swift; sourceTree = "<group>"; };
 		27DF28841B531CFD0018B03A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		27F5781F1B54474F00DD20BF /* UITableViewCell+KKFABHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+KKFABHelper.swift"; sourceTree = "<group>"; };
 		A0489B8D638D37E766ECA733 /* Pods_KKFloatingActionButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKFloatingActionButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5406D2676BC372F1690196F /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A7C5D5E279060B00F43C8CA6 /* Pods-KKFloatingActionButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKFloatingActionButton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KKFloatingActionButton/Pods-KKFloatingActionButton.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				27DF287E1B530AEF0018B03A /* Info.plist */,
 				27DF287F1B530AEF0018B03A /* KKFloatingActionButton.h */,
 				27DF28801B530AEF0018B03A /* KKFloatingMaterialButton.swift */,
+				27F5781F1B54474F00DD20BF /* UITableViewCell+KKFABHelper.swift */,
 			);
 			path = KKFloatingActionButton;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DF28851B531CFD0018B03A /* README.md in Sources */,
+				27F578201B54474F00DD20BF /* UITableViewCell+KKFABHelper.swift in Sources */,
 				27DF28831B530AEF0018B03A /* KKFloatingMaterialButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

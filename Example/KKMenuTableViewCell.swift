@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KKFloatingActionButton
 
 class KKMenuTableViewCell: UITableViewCell {
 
@@ -19,9 +20,7 @@ class KKMenuTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.backgroundColor = UIColor.clearColor()
-        self.contentView.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI))
-        self.selectionStyle = .None
+        self.configureCellForKKFloatingActionButtonMenu()
 
     }
 
