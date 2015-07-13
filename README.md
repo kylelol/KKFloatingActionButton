@@ -7,7 +7,7 @@
 
 KKFloatingActionButton is very customizable Google Material Design-like menu. The menu is driven by a table view, and the control allows you to pass your own custom cells. 
 
-[![Screencapture GIF](https://dl.dropboxusercontent.com/u/21995835/out1.gif)
+![Screencapture GIF](https://dl.dropboxusercontent.com/u/21995835/out.gif)
 
 ## Usage
 
