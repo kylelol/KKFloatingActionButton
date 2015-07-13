@@ -31,28 +31,28 @@ pod "KKFloatingActionButton"
 Refer to the example project for more guidance. 
 
 1. Add the import statement to your view controller. 
-````swift
-import KKFloatingActionButton
-````
+  ````swift
+  import KKFloatingActionButton
+  ````
 
 2. Create a UIView(prefrably a perfect square) in IB and assign the custom class to `KKFloatingMaterialButton`, then connect it to an outlet in your view controller: 
-````swift
-@IBOutlet weak var menuButton: KKFloatingMaterialButton!
-````
-(Note: This could be done programatically, I just prefer to use IB.)
+  ````swift
+  @IBOutlet weak var menuButton: KKFloatingMaterialButton!
+  ````
+  (Note: This could be done programatically, I just prefer to use IB.)
 
 3.  Conform to the `KKFloatingMaterialButtonDataSource` and `KKFloatingMaterialButtonDelegate`
 
-The control contains a `customTableViewCell` property which is a tuple that requires a `UINib`, representing the cell to be displayed in the menu, and a `String` which is the `reuseIdentifier` to be used for the cell. Set this property with your own custom table view cell. **The project does not use a deafult cell, you must provide a custom one. Refer to Example project. **
+  The control contains a `customTableViewCell` property which is a tuple that requires a `UINib`, representing the cell to be displayed in the menu, and a `String` which is the `reuseIdentifier` to be used for the cell. Set this property with your own custom table view cell. **The project does not use a deafult cell, you must provide a custom one. Refer to Example project. **
 
 4. Inside your view controllers `viewDidLoad()` call the `configureViews()` method on the `KKFloatingMaterialButton`, then continue to customize the button. 
-````Swift
-// Inside viewDidLoad()
-menuButton.configureViews()
-menuButton.dataSource = self
-menuButton.delegate = self
-// Continue customizing....
-````
+  ````Swift
+  // Inside viewDidLoad()
+  menuButton.configureViews()
+  menuButton.dataSource = self
+  menuButton.delegate = self
+  // Continue customizing....
+  ````
 
 ## Customization
 
