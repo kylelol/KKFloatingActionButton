@@ -6,7 +6,7 @@ s.name = "KKFloatingActionButton"
 s.summary = "RWPickFlavor lets a user select an ice cream flavor."
 s.requires_arc = true
 # 2
-s.version = "0.0.7"
+s.version = "0.1.0"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
