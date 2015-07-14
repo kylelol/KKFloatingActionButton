@@ -23,7 +23,7 @@ KKFloatingActionButton is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "KKFloatingActionButton"
+pod 'KKFloatingActionButton', '~> 0.1.0'
 ```
 
 ## Setup 
@@ -43,12 +43,14 @@ Refer to the example project for more guidance.
 
 3.  Conform to the `KKFloatingMaterialButtonDataSource` and `KKFloatingMaterialButtonDelegate`
 
-  The control contains a `customTableViewCell` property which is a tuple that requires a `UINib`, representing the cell to be displayed in the menu, and a `String` which is the `reuseIdentifier` to be used for the cell. Set this property with your own custom table view cell. **The project does not use a deafult cell, you must provide a custom one. Refer to Example project. **
+  The control contains a `customTableViewCell` property which is a tuple that requires a `UINib`, representing the cell to be displayed in the menu, and a `String` which is the `reuseIdentifier` to be used for the cell. Set this property with your own custom `UITableViewCell`. **The project does not use a deafult cell, you must provide a custom one. Refer to Example project. **
 
-4. Inside your view controllers `viewDidLoad()` call the `configureViews()` method on the `KKFloatingMaterialButton`, then continue to customize the button. 
+4. Create the custom `UITableViewCell` to be used in the menu. Be sure to call `configureCellForKKFloatingActionButtonMenu()` inside the cell's `awakeFromNib()` method, otherwise the cells will appear upside down.  
+
+5. Inside your view controllers `viewDidLoad()` call the `configureViews()` method on the `KKFloatingMaterialButton` BEFORE customizing.
   ````Swift
   // Inside viewDidLoad()
-  menuButton.configureViews()
+  menuButton.configureViews() // Call this first 
   menuButton.dataSource = self
   menuButton.delegate = self
   // Continue customizing....
@@ -65,6 +67,10 @@ Here are some of the customization points of the control:
 * `menuBgOpacity: CGFloat` - The opacity of the overlay that appears when the menu is presented. 
 * `rotatingImage: UIImage?` - The image that rotated when the menu is presented. Displayed half the size of the button, aligned with the button's center.
 * `imageRotationAngle: CGFloat` - The angle to rotate the rotatingImage when the menu is presented. 
+* `rippleColor: UIColor?` - The color of the ripple animation that occurs when the button is toched. 
+* `ripplePercent: Float' - How far the ripple animation when ripple outwards. 
+* `rippleLocation: MKRippleLocation` - The start location of the ripple animation. Refer to MaterialKit documentation https://github.com/nghialv/MaterialKit.
+
 
 ## License
 
