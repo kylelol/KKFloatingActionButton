@@ -10,7 +10,7 @@ pod 'MaterialKit'
 end
 
 target 'Example' do
-    pod 'KKFloatingActionButton'
+    pod 'KKFloatingActionButton', '~> 0.1.0' 
     # pod 'KKFloatingActionButton', :path => '~/Documents/Libraries/KKFloatingActionButton'
 end
 

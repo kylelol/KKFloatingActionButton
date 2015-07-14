@@ -9,8 +9,8 @@
 // KKFloatingActionButton
 #define COCOAPODS_POD_AVAILABLE_KKFloatingActionButton
 #define COCOAPODS_VERSION_MAJOR_KKFloatingActionButton 0
-#define COCOAPODS_VERSION_MINOR_KKFloatingActionButton 0
-#define COCOAPODS_VERSION_PATCH_KKFloatingActionButton 7
+#define COCOAPODS_VERSION_MINOR_KKFloatingActionButton 1
+#define COCOAPODS_VERSION_PATCH_KKFloatingActionButton 0
 
 // MaterialKit
 #define COCOAPODS_POD_AVAILABLE_MaterialKit

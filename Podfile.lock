@@ -1,14 +1,14 @@
 PODS:
-  - KKFloatingActionButton (0.0.7):
+  - KKFloatingActionButton (0.1.0):
     - MaterialKit
   - MaterialKit (0.3.5)
 
 DEPENDENCIES:
-  - KKFloatingActionButton
+  - KKFloatingActionButton (~> 0.1.0)
   - MaterialKit
 
 SPEC CHECKSUMS:
-  KKFloatingActionButton: 8fdcda2fb76029d3828bced8b880ef756d9fffae
+  KKFloatingActionButton: 49bfe6ec9adc85d3379dfb37fb432df9eb893eb2
   MaterialKit: 6f1e9382f89593df768bc0c31ded9952a6d8ad46
 
 COCOAPODS: 0.37.2
